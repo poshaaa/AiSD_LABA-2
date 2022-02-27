@@ -1,0 +1,49 @@
+with open("text.txt", "r") as F:
+    s = F.read().splitlines()
+
+print("Содержимое файла: ",s)
+
+mx = 0
+msax = 0
+mtsax = 0
+kolvo = 0
+
+#поиск наибольшей длины числа и кол-ва чисел в файле
+for i in range(0, len(s)):
+    ln = 0
+    x = int(s[i])
+    while x:
+        x //= 10
+        ln += 1
+    if mx < ln:
+        mx = ln
+    kolvo+=1
+
+#подсчет чисел наибольшей длины
+for i in range(0, len(s)):
+    ln = 0
+    x = int(s[i])
+    while x:
+        x //= 10
+        ln += 1
+    if mx == ln:
+        msax += 1
+
+print("В данном файле всего", kolvo,"чисел, среди которых:")
+print(mx, "- разрядных чисел: ", msax, ";")
+
+#подсчет чисел, отличной от наибольшей длины, в порядке убывания
+while mx != 0:
+    mx -= 1
+    for i in range(0, len(s)):
+        ln = 0
+        x = int(s[i])
+        while x:
+            x //= 10
+            ln += 1
+        if mx == ln:
+            mtsax += 1
+    if mtsax != 0:
+        print(mx, "- разрядных чисел: ", mtsax, ";")
+    mtsax = 0
+print("В данной программе последовательность нулей, находящаяся перед числом, не влияет на его разряд.")
