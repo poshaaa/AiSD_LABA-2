@@ -7,7 +7,7 @@ with open("text.txt", "r") as F:
             ln = (len(line))-3
         else:
             ln = (len(line))-2
-        if ln != 0:
+        if ln != 0 and ln>0:
             print ("Его длина без пробелов и запятых -  | ", ln, " | \n")
 
 
