@@ -1,14 +1,16 @@
-ln = 0
-element = ','
-with open("text.txt", "r") as F:
-    for line in F:
-        print("Данное число: ", line.strip())
-        if element in line:
-            ln = (len(line))-3
-        else:
-            ln = (len(line))-2
-        if ln != 0 and ln>0:
-            print ("Его длина без пробелов и запятых -  | ", ln, " | \n")
+import time
 
+element1 = ','
+element2 = '.'
+k=0
+with open('text.txt') as file:
+    for i in file.read():                #считываем каждый строчный символ в файле
+        if i.isnumeric() == True:        #если символ является цифрой, то
+            k=k+1                        #увеличиваем значение длины числа
+        elif i == '.' or i == ',' or i == '-':       #если число дробное, то
+            k=k+0                        #чтобы не учитывать '.' или  ',' в длину строки, не меняем счетчик
+        else:                            #если символ не является цифрой, то
+            print ("Длина числа:  ", k, "\n") #выводим значение длины данного числа
+            k = 0                        #обнуляем счетчик для нового числа
 
-    print ("...\n Файл имитирует бесконечную последовательность")
+print("Время работы программы:  ", time.process_time(), "seconds")
