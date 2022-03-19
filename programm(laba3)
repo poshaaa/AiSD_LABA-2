@@ -1,0 +1,31 @@
+import time
+import os
+
+k = 1                                                                                             # счетчик длины числа 
+array_result = []                                                                                 # массив для вывода результата
+buffer_len = 1                                                                                    # размер буфера чтения
+
+try:
+    with open("text.txt", "r") as file:                                                           # открываем файл
+        buffer = file.read(buffer_len)                                                            # читаем первый блок
+
+        while buffer:                                                                             # пока файл не пустой
+            while (buffer < '0' or buffer > '9') and buffer:                                      # ищем цифры
+                buffer = file.read(buffer_len)                                                    # читаем очередной блок
+
+            while (buffer >= '0' and buffer <= '9' or buffer == '.' or buffer == ',') and buffer: # обрабатываем цифры
+                buffer = file.read(buffer_len)                                                    # читаем очередной блок
+                if buffer.isnumeric() == True:                                                    # если символ является цифрой, то
+                    k += 1                                                                        # увеличиваем значение длины числа
+                elif buffer == '.' or buffer == ',' or buffer == '-':                             # если число дробное, то
+                    k += 0                                                                        # чтобы не учитывать '.' или  ',' в длину строки, не меняем счетчик
+                else:                                                                             # если символ не является цифрой, то
+                    if k > 0:
+                        array_result.append(f"Длина числа {k}")
+                        # print ("Длина числа:  ", k, "\n")                                       #выводим значение длин чисел
+                    k = 1                                                                         # возвращаем счетчику исходное значение для нового числа
+
+        print(array_result)                                                                       # выводим массив с результатами
+except FileNotFoundError:
+    print("\nФайл text.txt в директории проекта не обнаружен.\nДобавьте файл в директорию или переименуйте существующий *.txt файл.")
+print("Время работы программы:  ", time.process_time(), "seconds")
