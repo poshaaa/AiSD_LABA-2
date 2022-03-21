@@ -11,18 +11,14 @@ try:
             while (buffer < '0' or buffer > '9') and buffer:                                      # ищем цифры
                 buffer = file.read(buffer_len)                                                    # читаем очередной блок
 
-            while (buffer >= '0' and buffer <= '9' or buffer == '.' or buffer == ',') and buffer: # обрабатываем цифры
+            while (buffer >= '0' and buffer <= '9') and buffer: # обрабатываем цифры
                 buffer = file.read(buffer_len)                                                    # читаем очередной блок
                 if buffer.isnumeric() == True:                                                    # если символ является цифрой, то
-                    k += 1                                                                        # увеличиваем значение длины числа
-                elif buffer == '.' or buffer == ',' or buffer == '-':                             # если число дробное, то
-                    k += 0                                                                        # чтобы не учитывать '.' или  ',' в длину строки, не меняем счетчик
+                k += 1                                                                            # увеличиваем значение длины числа
                 else:                                                                             # если символ не является цифрой, то
                     if k > 0:
-                        array_result.append(f"Длина числа {k}")
-                        # print ("Длина числа:  ", k, "\n")                                       # выводим значение длин чисел
+                        array_result.append(f"Длина числа {k}")                                   # выводим значение длин чисел
                     k = 1                                                                         # возвращаем счетчику исходное значение для нового числа
-
         maXK = max(array_result)                                                                  # ищем максимальную длину числа для дальнейшего вывода
 
         for t in range(1, maXK+1):                                                                # считаем в цикле кол-во каждого из встретившихся значений длины 
