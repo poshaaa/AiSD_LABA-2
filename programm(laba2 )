@@ -1,8 +1,9 @@
-k = 1                                                                                             # счетчик длины числа 
-array_result = []                                                                                 # массив для вывода результата
-buffer_len = 1                                                                                    # размер буфера чтения
-maXK = 0                                                                                          # максимальная длина 
+k = 0                                                                                             # счетчик длины числа 
+array_len = []                                                                                 # массив для вывода результата
+array_qv = []
+buffer_len = 1                                                                                    # размер буфера чтения 
 dot_flag = False
+position=1
 try:
     with open("text.txt", "r") as file:                                                           # открываем файл
         buffer = file.read(buffer_len)                                                            # читаем первый блок
@@ -10,7 +11,8 @@ try:
         while buffer:                                                                             # пока файл не пустой
             while (buffer < '0' or buffer > '9') and buffer!='.' and buffer!=',' and buffer:      # ищем цифры
                 buffer = file.read(buffer_len)                                                    # читаем очередной блок
-
+                position+=1
+                
             while (buffer >= '0' and buffer <= '9') or (buffer =='.' or buffer ==',') and buffer:     # обрабатываем цифры                                                 
                 if buffer ==',' or buffer=='.':
                     dot_flag=True
