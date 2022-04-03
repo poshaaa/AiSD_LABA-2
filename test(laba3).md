@@ -11,30 +11,30 @@
 | Файл отсуствует или имеет другое название | "Файл text.txt в директории проекта не обнаружен.Добавьте файл в директорию или переименуйте существующий *.txt файл." |
 | Время работы программы  |
 | 10000 символов | 0.046875 seconds|
-|ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-|        1  | 0.000  |  0.000  |  0.002  |  0.002 <string>:1(<module>)
-|        1  |  0.000 |   0.000 |   0.000 |   0.000 _bootlocale.py:11(getpreferredencoding)
-|        1  |  0.000 |   0.000 |   0.000 |  0.000 codecs.py:260(__init__)
-|        2  |  0.000 |   0.000 |   0.000 |   0.000 codecs.py:281(getstate)
-|        2  |  0.000 |   0.000 |   0.000 |   0.000 cp1251.py:22(decode)
-|        1  |  0.000 |   0.000 |   0.002 |   0.002 main.py:133(main)
-|        1  |  0.002 |   0.002 |   0.002 |   0.002 main.py:80(Lena_the_best)
-|        2  |  0.000 |   0.000 |   0.000 |   0.000 {built-in method _codecs.charmap_decode}
-|        1  |  0.000 |   0.000 |   0.000 |   0.000 {built-in method _locale._getdefaultlocale}
-|        1  |  0.000 |   0.000 |   0.002 |   0.002 {built-in method builtins.exec}
-|        2  |  0.000 |   0.000 |   0.000 |   0.000 {built-in method builtins.len}
-|        5  |  0.000 |   0.000 |   0.000 |   0.000 {built-in method builtins.print}
-|        1  |  0.000 |   0.000 |   0.000 |   0.000 {built-in method io.open}
-|        1  |  0.000 |   0.000 |   0.000 |   0.000 {built-in method time.process_time}
-|        1  |  0.000 |   0.000 |   0.000 |   0.000 {method '__exit__' of '_io._IOBase' objects}
-|        8  |  0.000 |   0.000 |   0.000 |   0.000 {method 'append' of 'list' objects}
-|        1  |  0.000 |   0.000 |   0.000 |   0.000 {method 'disable' of '_lsprof.Profiler' objects}
-|      996  |  0.000 |   0.000 |   0.000 |   0.000 {method 'index' of 'list' objects}
-|     4879  |  0.000 |   0.000 |   0.000 |   0.000 {method 'read' of '_io.TextIOWrapper' objects}
-|40000 символов | 0.17 секунды |
-| 80000 символов  | 0.24 секунды |
-| 120000 символов | 0.375 секунды |
-| 1000000 символов | 12 секунд |
-| 2800000 символов | 13.2 секунды |
+|ncalls      |tottime | percall | cumtime | percall filename:lineno(function)|
+|        1  | 0.000  |  0.000  |  0.002  |  0.002 <string>:1(<module>)|
+|        1  |  0.000 |   0.000 |   0.000 |   0.000 _bootlocale.py:11(getpreferredencoding)|
+|        1  |  0.000 |   0.000 |   0.000 |  0.000 codecs.py:260(__init__)|
+|        2  |  0.000 |   0.000 |   0.000 |   0.000 codecs.py:281(getstate)|
+|        2  |  0.000 |   0.000 |   0.000 |   0.000 cp1251.py:22(decode)|
+|        1  |  0.000 |   0.000 |   0.002 |   0.002 main.py:133(main)|
+|        1  |  0.002 |   0.002 |   0.002 |   0.002 main.py:80(Lena_the_best)|
+|        2  |  0.000 |   0.000 |   0.000 |   0.000 {built-in method _codecs.charmap_decode}|
+|        1  |  0.000 |   0.000 |   0.000 |   0.000 {built-in method _locale._getdefaultlocale}|
+|        1  |  0.000 |   0.000 |   0.002 |   0.002 {built-in method builtins.exec}|
+|        2  |  0.000 |   0.000 |   0.000 |   0.000 {built-in method builtins.len}|
+|        5  |  0.000 |   0.000 |   0.000 |   0.000 {built-in method builtins.print}|
+|        1  |  0.000 |   0.000 |   0.000 |   0.000 {built-in method io.open}|
+|        1  |  0.000 |   0.000 |   0.000 |   0.000 {built-in method time.process_time}|
+|        1  |  0.000 |   0.000 |   0.000 |   0.000 {method '__exit__' of '_io._IOBase' objects}|
+|        8  |  0.000 |   0.000 |   0.000 |   0.000 {method 'append' of 'list' objects}|
+|        1  |  0.000 |   0.000 |   0.000 |   0.000 {method 'disable' of '_lsprof.Profiler' objects}|
+|      996  |  0.000 |   0.000 |   0.000 |   0.000 {method 'index' of 'list' objects}|
+|     4879  |  0.000 |   0.000 |   0.000 |   0.000 {method 'read' of '_io.TextIOWrapper' objects}|
+|40000 символов | 0.17 секунды |                                                                 |
+| 80000 символов  | 0.24 секунды |                                                               |
+| 120000 символов | 0.375 секунды |                                                              |
+| 1000000 символов | 12 секунд |                                                                 |
+| 2800000 символов | 13.2 секунды |                                                              |
 
   
