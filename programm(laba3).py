@@ -5,7 +5,7 @@ from memory_profiler import profile
 
 
 @profile
-def Lena_the_best():
+def task():
     k = 0  # счетчик длины числа
     array_len = []  # массив для вывода результата
     array_qv = []
@@ -59,9 +59,9 @@ def Lena_the_best():
 
 
 def main():
-    Lena_the_best()
+    task()
 
 
 if __name__ == '__main__':
     cProfile.run('main()')
-    Lena_the_best()
+    task()
